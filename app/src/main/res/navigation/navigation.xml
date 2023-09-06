@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/fragmentMain">
+
+    <fragment
+        android:id="@+id/fragmentMain"
+        android:name="com.lucky.game.ui.navigator.FragmentNavigator"
+        android:label="FragmentMain" >
+        <action
+            android:id="@+id/action_fragmentMain_to_fragmentPairs"
+            app:destination="@id/fragmentPairs" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentPairs"
+        android:name="com.lucky.game.ui.pairs.FragmentPairs"
+        android:label="FragmentPairs" >
+        <action
+            android:id="@+id/action_fragmentPairs_to_dialogWinner"
+            app:destination="@id/dialogWinner" />
+        <action
+            android:id="@+id/action_fragmentPairs_to_dialogPause"
+            app:destination="@id/dialogPause" />
+    </fragment>
+    <dialog
+        android:id="@+id/dialogWinner"
+        android:name="com.lucky.game.ui.dialogs.DialogWinner"
+        android:label="DialogWinner" >
+        <argument
+            android:name="time"
+            app:argType="integer" />
+    </dialog>
+    <dialog
+        android:id="@+id/dialogPause"
+        android:name="com.lucky.game.ui.dialogs.DialogPause"
+        android:label="DialogPause" />
+</navigation>

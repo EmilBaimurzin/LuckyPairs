@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textSize="40sp"
+            style="@style/BasicText"
+            android:text="@string/pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.lucky.game.core.library.CustomImageButton
+            android:id="@+id/play"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/pause_play"
+            android:layout_marginTop="20dp"/>
+
+    </LinearLayout>
+
+</FrameLayout>

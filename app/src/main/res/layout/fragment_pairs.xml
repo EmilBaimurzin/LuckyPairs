@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background03"
+    android:layout_height="match_parent">
+
+    <com.lucky.game.core.library.CustomImageButton
+        android:id="@+id/menu"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/menu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.lucky.game.core.library.CustomImageButton
+        android:id="@+id/pause"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/pause"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/time"
+        style="@style/BasicText"
+        android:layout_width="120dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/time"
+        android:paddingTop="3dp"
+        android:textColor="#65001a"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menu"
+        tools:text="03:45" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/gameRv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time" />
+
+    <com.lucky.game.core.library.CustomImageButton
+        android:id="@+id/replay"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/replay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gameRv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
